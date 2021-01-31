@@ -10,8 +10,11 @@ function PostPage({ data }) {
     return (
         <Layout>
             <div className={"post-hero"}>
-                <img src={post.featuredImage.node.mediaItemUrl} alt={post.featuredImage.node.altText} className={"featured-image"}/>
-                <div className="">
+                <div className={"hero-image"}>
+                    <img src={post.featuredImage.node.mediaItemUrl} alt={post.featuredImage.node.altText} className={"featured-image"}/>
+                    <div className="overlay"/>
+                </div>
+                <div>
                     <h2 className="title">{post.title}</h2>
                     <em>von {post.author.node.firstName} {post.author.node.lastName}</em>
                 </div>
